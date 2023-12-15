@@ -1,6 +1,6 @@
 {
   "name": "@phucpham-infinity/webrtc-utils",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "author": "phucpham",
   "files": [
     "dist",
@@ -9,14 +9,16 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.module.js",
+  "umd:main": "dist/index.umd.js",
   "unpkg": "./dist/index.umd.js",
   "source": "./src/index.ts",
-  "exports": {
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.modern.js"
-  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.umd.js",
+    "default": "./dist/index.umd.js"
   },
   "scripts": {
     "build": "microbundle"
