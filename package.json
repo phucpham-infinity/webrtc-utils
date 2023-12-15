@@ -1,7 +1,11 @@
 {
   "name": "@phucpham-infinity/webrtc-utils",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "phucpham",
+  "files": [
+    "dist",
+    "src"
+  ],
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.module.js",
