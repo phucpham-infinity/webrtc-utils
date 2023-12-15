@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 20.9.0
           registry-url: https://npm.pkg.github.com/
-          scope: "@fcorpvn"
+          scope: "@phucpham-infinity"
 
       - name: Install deps and build
         uses: borales/actions-yarn@v4
