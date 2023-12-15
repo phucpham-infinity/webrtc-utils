@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
     name: Build, lint, and test on Node
-    runs-on: [self-hosted, dockerize]
+    runs-on: ubuntu-latest
     env:
       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
