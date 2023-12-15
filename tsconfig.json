@@ -9,6 +9,7 @@
     /* Bundler mode */
     "isolatedModules": true,
     "noEmit": true,
+    "jsx": "react",
   
 
     /* Linting */
