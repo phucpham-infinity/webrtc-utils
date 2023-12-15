@@ -1,44 +1,27 @@
 {
   "name": "@phucpham-infinity/webrtc-utils",
   "version": "1.0.7",
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "author": "phucpham",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "source": "./src/index.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && rollup -c",
-    "build:dev": "vite build",
-    "build:watch": "npx nodemon",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "node ./preview/index.js",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "build": "microbundle"
   },
+  "keywords": [],
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.5",
-    "@types/lodash": "^4.14.200",
-    "@types/node": "^20.8.9",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
-    "browser-sync": "^2.29.3",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "eslint-plugin-sort-class-members": "^1.19.0",
+    "@types/lodash": "^4.14.202",
     "lodash": "^4.17.21",
-    "rollup": "^4.9.0",
-    "rollup-plugin-dts": "^6.1.0",
-    "typescript": "^5.0.2",
-    "vite": "^4.5.0",
-    "vite-plugin-static-copy": "^0.17.0",
-    "vitest": "^0.34.6"
+    "microbundle": "^0.15.1"
   },
-  "dependencies": {
-    "tslib": "^2.6.2"
-  }
+  "types": "./dist/index.d.ts"
 }
