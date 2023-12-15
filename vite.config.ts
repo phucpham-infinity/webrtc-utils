@@ -18,12 +18,12 @@ export default defineConfig({
       output: [
         {
           dir: "./dist",
-          entryFileNames: "index.umd.js",
+          entryFileNames: "index.js",
           format: "umd",
         },
         {
           dir: "./dist",
-          entryFileNames: "index.js",
+          entryFileNames: "index.esm.js",
           format: "esm",
         },
       ],
