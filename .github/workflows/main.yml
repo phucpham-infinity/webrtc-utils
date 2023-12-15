@@ -1,0 +1,39 @@
+name: CI
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build:
+    name: Build, lint, and test on Node
+    runs-on: [self-hosted, dockerize]
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Use Node ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.9.0
+          registry-url: https://npm.pkg.github.com/
+          scope: "@fcorpvn"
+
+      - name: Install deps and build
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: Build
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
+
+      - name: Publish package
+        run: npm publish
