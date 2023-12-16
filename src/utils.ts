@@ -1,7 +1,7 @@
 //@ts-nocheck
 
 import freeice from "freeice";
-import { inherits } from "inherits";
+import inherits from "inherits";
 import UAParser from "ua-parser-js";
 import { v4 as uuidv4 } from "uuid";
 import hark from "hark";
